@@ -99,11 +99,8 @@
 
   </table>
 <div class="container-fluid">
-<form action="" method="post" enctype="multipart/form-data">
-
-
-<form method="POST">
-  <input type="hidden" name="csrfmiddlewaretoken" value="JDGQad4eiSbny68LaRf4ACmIR5gGPt3LbY2H0BPzWLZ7sVTcvaqaRNf2ad5uT2Ub">
+<form action="excel/upload4" method="post" enctype="multipart/form-data">
+  @csrf
   <strong>
     <table>
           <td>

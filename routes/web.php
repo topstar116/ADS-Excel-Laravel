@@ -26,7 +26,7 @@ Route::get('upload3', function () { return view('upload3'); })->name('upload3');
 Route::get('upload4', function () { return view('upload4'); })->name('upload4');
 Route::get('upload5', function () { return view('upload5'); })->name('upload5');
 Route::get('upload0', function () { return view('upload0'); })->name('upload0');
-Route::get('uploadEx1', function () { return view('uploadEx1'); })->name('uploadEx1');
+Route::get('uploadEx1', function () { return view('uploadEx1')->with('file_type','csv'); })->name('uploadEx1');
 
 Route::post('excel/upload1', [ExcelController::class, 'upload1']);
 Route::post('excel/upload2', [ExcelController::class, 'upload2']);
@@ -34,7 +34,7 @@ Route::post('excel/upload3', [ExcelController::class, 'upload3']);
 Route::post('excel/upload4', [ExcelController::class, 'upload4']);
 Route::post('excel/upload5', [ExcelController::class, 'upload5']);
 Route::post('excel/upload0', [ExcelController::class, 'upload0']);
-Route::post('excel/uploadEx1', [ExcelController::class, 'uploadEx1']);
+Route::post('excel/uploadEx1', [ExcelController::class, 'uploadEx1'])->name('uploadEx1_post');
 
 
 

@@ -29,19 +29,19 @@
   <div class="collapse navbar-collapse">
       <ul class="navbar-nav">
           <li class="nav-item">
-              <a class="nav-link" href="upload1">1_オート広告除外</a>
+              <a class="nav-link" href="{{route('upload1')}}">1_オート広告除外</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="upload2">2_キーワード仕入れ</a>
+            <a class="nav-link" href="{{route('upload2')}}">2_キーワード仕入れ</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="upload3">3_入札額調整</a>
+            <a class="nav-link" href="{{route('upload3')}}">3_入札額調整</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="upload4">4_マニュアル保留設定</a>
+            <a class="nav-link" href="{{route('upload4')}}">4_マニュアル保留設定</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="upload5">5_完全一致移行</a>
+            <a class="nav-link" href="{{route('upload5')}}">5_完全一致移行</a>
           </li>
         <div class="dropdown">
           <!-- 切替ボタンの設定 -->
@@ -50,8 +50,8 @@
           </a>
           <!-- ドロップメニューの設定 -->
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenu">
-              <a class="dropdown-item" href="upload0">Ex0_新規広告作成</a>
-              <a class="dropdown-item" href="uploadEx1">Ex1_広告費削減施策</a>
+              <a class="dropdown-item" href="{{route('upload0')}}">Ex0_新規広告作成</a>
+              <a class="dropdown-item" href="{{route('uploadEx1')}}">Ex1_広告費削減施策</a>
             </div><!-- /.dropdown-menu -->
           </div><!-- /.dropdown-menu -->
         </div><!-- /.dropdown -->
@@ -99,15 +99,13 @@
   </table>
 <div class="container-fluid">
 
-<form action="" name="form" method="post" enctype="multipart/form-data">
-    <input type="hidden" name="csrfmiddlewaretoken" value="FxODwdMmM8Lvn0fG9D22gXS2oRKPpcTS7SaumBxHq1zfhP07uWd8x8LmHZzDtLKi">
-
-
+<form action="{{ route('uploadEx1_post') }}" name="form" method="post" enctype="multipart/form-data">
+    @csrf
     <strong>
       <table>
             <td>
             <label for="checkbox_target_disp">
-            <input type="checkbox" id='checkbox_target_disp' name ='checkbox_target_disp'  checked   ">
+            <input type="checkbox" id='checkbox_target_disp' name ='checkbox_target_disp'  checked>
             <input type="hidden" name ='checkbox_target' id='checkbox_target'>
             <font size =5 color = red > 商品ターゲティング広告を利用する</font><br>
             <font size = 2.5 color = gray>
@@ -143,7 +141,12 @@
           <tr>
 
           <td>
-        ファイル1:
+          @if($file_type == 'csv')
+          ファイル1:
+          @elseif($file_type == 'excel')
+          ファイル2:
+          @endif        
+        
         </td>
 
         <td>
@@ -154,7 +157,14 @@
 
     </strong>
 
+  @if($file_type == 'csv')
   <font color = "red ">「ASIN別 詳細ページ売上・トラフィック」ファイルを選択して下さい。</font><br>
+  <input name="file_type" type="hidden" value="csv">
+  @elseif($file_type == 'excel')
+  <font color = "red ">「バルク操作ファイル６０日分」ファイル選択して下さい。</font><br>
+  <input name="file_type" type="hidden" value="excel">
+  @endif
+
 
   <button type="submit" class="btn btn-primary" onclick = "checkbox_value_copy()">実行</button>
 
