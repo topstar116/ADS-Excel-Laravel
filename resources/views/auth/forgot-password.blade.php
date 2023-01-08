@@ -1,64 +1,34 @@
+<x-guest-layout>
+    <x-auth-card>
+        <x-slot name="logo">
+            <div style="font-size: 40px;font-weight: bolder;">広告のやつ</div>
+        </x-slot>
 
-<!doctype html>
-<html>
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  
-  <!-- linkタグでbootstrapのcssファイルを読み込む -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+        <div class="mb-4 text-sm text-gray-600">
+            {{ __('パスワード設定メール送信') }}
+        </div>
 
-  <!-- タイトルの設定-->
-  <title>広告のやつ</title>
+        <!-- Session Status -->
+        <x-auth-session-status class="mb-4" :status="session('status')" />
 
-<body>
+        <!-- Validation Errors -->
+        <x-validation-errors class="mb-4" :errors="$errors" />
 
-  
-<nav class="navbar navbar-expand-sm sticky-top navbar-dark bg-dark my-3">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav4" aria-controls="navbarNav4" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-  </button>
-  <a class="navbar-brand" href="#">広告のやつ</a>
-  <div class="collapse navbar-collapse">
-  </div>
-</nav>
+        <form method="POST" action="{{ route('password.email') }}">
+            @csrf
 
-<!--
-<div class="content-wrapper">
-<div class="container-fluid">
-<div class="card mb-3">
-<div class="card-header bg-primary">
-<h3><b><font color="white">パスワード再設定</font></b></h3></div>
-<div class="card-body">
+            <!-- Email Address -->
+            <div>
+                <x-label for="email" :value="__('メールアドレス')" />
 
-    
+                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+            </div>
 
-    <p>パスワードをお忘れですか？パスワードをリセットするために、メールアドレスを入力してください。</p>
--->
-
-<div class ="container">
-  <p class="h3">パスワード設定メール送信</p>
-
-    <form method="POST" action="/accounts/password/reset/" class="password_reset">
-        <input type="hidden" name="csrfmiddlewaretoken" value="vyPiOo6KlCZMNLweXPrUEZNlvCL05a5UXTb9EMR5ZvNwHAhFi8C0VaGFOKAO9JWk">
-
-        <p><label for="id_email">メールアドレス:</label> <input type="email" name="email" size="30" placeholder="メールアドレス" required id="id_email"></p>
-        <input class="btn btn-primary" type="submit" value="パスワード設定メールを送る" />
-    </form>
-
-    <p>パスワードの再設定に問題がある場合はご連絡ください。</p>
-    <a class="btn btn-primary" href="/accounts/login/" role="button">ログイン画面</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-
-
-  <!-- bootstrapのjavascrit読み込み-->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-
-
-</body>
-</html>
+            <div class="flex items-center justify-end mt-4">
+                <x-button>
+                    {{ __('パスワード設定メールを送る') }}
+                </x-button>
+            </div>
+        </form>
+    </x-auth-card>
+</x-guest-layout>

@@ -1,61 +1,56 @@
+<x-guest-layout>
+    <x-auth-card>
+        <x-slot name="logo">
+            
+            <div style="font-size: 40px;font-weight: bolder;">ログイン</div>
+            
+        </x-slot>
 
-<!doctype html>
-<html>
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  
-  <!-- linkタグでbootstrapのcssファイルを読み込む -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+        <!-- Session Status -->
+        <x-auth-session-status class="mb-4" :status="session('status')" />
 
-  <!-- タイトルの設定-->
-  <title>広告のやつ</title>
+        <!-- Validation Errors -->
+        <x-validation-errors class="mb-4" :errors="$errors" />
 
-<body>
+        <form method="POST" action="{{ route('login') }}">
+            @csrf
 
-  
-<nav class="navbar navbar-expand-sm sticky-top navbar-dark bg-dark my-3">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav4" aria-controls="navbarNav4" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-  </button>
-  <a class="navbar-brand" href="#">広告のやつ</a>
-  <div class="collapse navbar-collapse">
-  </div>
-</nav>
+            <!-- Email Address -->
+            <div>
+                <x-label for="email" :value="__('メールアドレス')" />
 
+                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+            </div>
 
-<div class ="container">
+            <!-- Password -->
+            <div class="mt-4">
+                <x-label for="password" :value="__('パスワード')" />
 
+                <x-input id="password" class="block mt-1 w-full"
+                                type="password"
+                                name="password"
+                                required autocomplete="current-password" />
+            </div>
 
+            <!-- Remember Me -->
+            <div class="block mt-4">
+                <label for="remember_me" class="inline-flex items-center">
+                    <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="remember">
+                    <span class="ml-2 text-sm text-gray-600">{{ __('ログインしたままにする') }}</span>
+                </label>
+            </div>
 
+            <div class="flex items-center justify-end mt-4">
+                @if (Route::has('password.request'))
+                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
+                        {{ __('パスワード設定はこちら') }}
+                    </a>
+                @endif
 
-
-
-  <p class="h3">ログイン</p>
-
-
-
-<form class="login" method="POST" action="/accounts/login/">
-
-  <input type="hidden" name="csrfmiddlewaretoken" value="mvNL9sGw8CFzJntthwCJjFcsU2EZtGmeZrZxTfLSRmp7jh870wJZjSjDoNtEiqDS">
-  <div class="well">
-
-  <p><label for="id_login">ユーザー名:</label> <input type="text" name="login" placeholder="ユーザー名" autofocus="autofocus" maxlength="150" required id="id_login"></p>
-<p><label for="id_password">パスワード:</label> <input type="password" name="password" placeholder="パスワード" required id="id_password"></p>
-<p><label for="id_remember">ログインしたままにする:</label> <input type="checkbox" name="remember" id="id_remember"></p>
-</div>
-
-
-  
-  <a class="button secondaryAction" href="{{ route('password.request') }}">パスワード設定はこちら</a>
-  <button class="btn btn-primary" type="submit">ログイン</button>
-
-</form>
-
-
-  <!-- bootstrapのjavascrit読み込み-->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-
-
-</body>
-</html>
+                <x-button class="ml-3">
+                    {{ __('ログイン') }}
+                </x-button>
+            </div>
+        </form>
+    </x-auth-card>
+</x-guest-layout>

@@ -4,7 +4,7 @@
         <div class="flex justify-between h-16">
             <div class="flex">
                 <!-- Logo -->
-                <div class="flex flex-shrink-0 items-center">
+                <div class="flex flex-shrink-0 items-center text-xl font-bold">
                     <a href="{{ route('home') }}">
                         広告のやつ
                     </a>
@@ -87,7 +87,7 @@
 
                     <x-slot name="content">
                         <x-dropdown-link :href="route('profile.show')">
-                            {{ __('My profile') }}
+                            {{ __('プロフィール編集') }}
                         </x-dropdown-link>
 
                         <!-- Authentication -->
@@ -96,7 +96,7 @@
 
                             <x-dropdown-link :href="route('logout')" onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                                {{ __('Log Out') }}
+                                {{ __('ログアウト') }}
                             </x-dropdown-link>
                         </form>
                     </x-slot>
