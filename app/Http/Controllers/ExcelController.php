@@ -303,7 +303,7 @@ class ExcelController extends Controller
                 if($checkbox_target_disp!=NULL && !(mb_substr($row[3], 0, 1, "UTF-8")=='A' || mb_substr($row[3], 0, 1, "UTF-8")=='P' || mb_substr($row[3], 0, 1, "UTF-8")=='E' || mb_substr($row[3], 0, 1, "UTF-8")=='G')) continue;
                 if(!in_array($row[14],$sku_arr)) continue;
                 
-                if($row[18] > $impression || $acos > $row[24]){
+                if($row[18] > $impression && $acos > $row[24]){
                     
                     Upload1::insert(['キャンペーン'=>$row[3], '広告グループ'=>$row[9], 'SKU'=>$row[14], 'ステータス'=>'一時停止']);
 
