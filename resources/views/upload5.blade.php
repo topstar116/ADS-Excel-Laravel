@@ -31,7 +31,7 @@
 
 <div class="container-fluid">
 
-<font size =5 color = "black "> 
+<font size =6 color = "black "> 
 5_完全一致移行
 </font>
 <form action="excel/upload5" method="post" enctype="multipart/form-data" class="my-10">

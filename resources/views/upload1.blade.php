@@ -29,7 +29,7 @@
 
                   <div class="container-fluid">
 
-                    <font size =5 color = "black "> 
+                    <font size =6 color = "black "> 
                       1_オート広告除外
                     </font>
 

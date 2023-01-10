@@ -32,7 +32,7 @@
                   </div>
 
                 <div class="container-fluid">
-                  <font size =5 color = "black "> 
+                  <font size =6 color = "black "> 
                     Ex0_新規広告作成
                   </font>
                   

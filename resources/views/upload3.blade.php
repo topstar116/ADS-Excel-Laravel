@@ -36,7 +36,7 @@
                   </div>
 
 <div class="container-fluid">
-<font size =5 color = "black "> 
+<font size =6 color = "black "> 
 3_入札額調整
 </font>
 <form action="excel/upload3" method="post" enctype="multipart/form-data" class="my-10">

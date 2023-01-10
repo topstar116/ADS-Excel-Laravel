@@ -29,7 +29,7 @@
                   </div>
 
 <div class="container-fluid">
-<font size =5 color = "black "> 
+<font size =6 color = "black "> 
 4_マニュアル保留設定
 </font>
 <form action="excel/upload4" method="post" enctype="multipart/form-data" class="my-10">

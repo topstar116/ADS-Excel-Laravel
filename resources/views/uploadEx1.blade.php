@@ -30,8 +30,12 @@
 
 
 <div class="container-fluid">
-<font size =5 color = "black "> 
+<font size =6 color = "black "> 
+@if($file_type == 'csv')
 Ex1_広告費削減施策P1
+@elseif($file_type == 'excel')
+Ex1_広告費削減施策P2
+@endif        
 </font>
 
 <form action="{{ route('uploadEx1_post') }}" name="form" method="post" enctype="multipart/form-data" class="my-10">

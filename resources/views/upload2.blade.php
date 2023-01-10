@@ -30,7 +30,7 @@
                   
 
 <div class="container-fluid">
-<font size =5 color = "black "> 
+<font size =6 color = "black "> 
 2_キーワード仕入れ
 </font>
 <form action="excel/upload2" method="post" enctype="multipart/form-data" class="my-10">
