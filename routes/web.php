@@ -50,8 +50,8 @@ Route::middleware('auth')->group(function () {
     Route::post('excel/uploadEx1', [ExcelController::class, 'uploadEx1'])->name('uploadEx1_post');
 
     Route::get('users', [UserController::class, 'index'])->name('users');
-    Route::post('add/user', [UserController::class, 'addUser'])->name('add.user');
-    Route::post('del/user', [UserController::class, 'delUser'])->name('del.user');
+    Route::get('add/user', [UserController::class, 'addUser'])->name('add.user');
+    Route::get('del/user', [UserController::class, 'delUser'])->name('del.user');
 
     Route::get('profile', [\App\Http\Controllers\ProfileController::class, 'show'])->name('profile.show');
     Route::put('profile', [\App\Http\Controllers\ProfileController::class, 'update'])->name('profile.update');
