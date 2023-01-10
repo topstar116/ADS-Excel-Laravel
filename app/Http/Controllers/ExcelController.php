@@ -179,6 +179,7 @@ class ExcelController extends Controller
         foreach ($sheets[1] as $row) {           
 
             if($row[19]=='クリック' || !(mb_substr($row[3],0,1)=='A' || mb_substr($row[3],0,1)=='P' || mb_substr($row[3],0,1)=='E') || $row[18] ==0 || $row[19] ==0) continue;
+            if(mb_substr($row[3],0,1)=='A' && $row[1]!='広告グループ') continue;
             if($checkbox_target==NULL && !($row[1]=='キーワード' || $row[1]=='広告グループ')) continue;
             if($checkbox_target!=NULL && !($row[1]=='キーワード' || $row[1]=='商品ターゲティング' || $row[1]=='広告グループ')) continue;
 
