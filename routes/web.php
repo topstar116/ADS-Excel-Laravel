@@ -30,7 +30,7 @@ Route::get('export/fast-excel', [ExportController::class, 'fastExcel'])->name('e
 
 Route::middleware('auth')->group(function () {
 
-    Route::get('/', function () { return view('upload1'); })->name('home');
+    Route::get('/', function () { return view('home'); })->name('home');
     
     Route::get('upload1', function () { return view('upload1'); })->name('upload1');
     Route::get('upload2', function () { return view('upload2'); })->name('upload2');
