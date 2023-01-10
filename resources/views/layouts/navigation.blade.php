@@ -89,7 +89,11 @@
                         <x-dropdown-link :href="route('profile.show')">
                             {{ __('プロフィール編集') }}
                         </x-dropdown-link>
-
+                        @if(Auth::user()->name == 'admin' || Auth::user()->name == 'rhi')
+                        <x-dropdown-link :href="route('users')">
+                            {{ __('ユーザー管理') }}
+                        </x-dropdown-link>
+                        @endif
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
@@ -100,6 +104,8 @@
                             </x-dropdown-link>
                         </form>
                     </x-slot>
+
+                    
                 </x-dropdown>
                 @else
                     <a href="{{ route('login') }}" class="text-sm text-gray-700 underline dark:text-gray-500">Log in</a>

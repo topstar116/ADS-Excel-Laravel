@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\ImportController;
 use App\Http\Controllers\ExportController;
 use App\Http\Controllers\ExcelController;
@@ -48,7 +49,10 @@ Route::middleware('auth')->group(function () {
     Route::post('excel/upload0', [ExcelController::class, 'upload0']);
     Route::post('excel/uploadEx1', [ExcelController::class, 'uploadEx1'])->name('uploadEx1_post');
 
-    
+    Route::get('users', [UserController::class, 'index'])->name('users');
+    Route::post('add/user', [UserController::class, 'addUser'])->name('add.user');
+    Route::get('del/user', [UserController::class, 'delUser'])->name('del.user');
+
     Route::get('profile', [\App\Http\Controllers\ProfileController::class, 'show'])->name('profile.show');
     Route::put('profile', [\App\Http\Controllers\ProfileController::class, 'update'])->name('profile.update');
 });
