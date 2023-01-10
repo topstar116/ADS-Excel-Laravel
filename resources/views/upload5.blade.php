@@ -6,43 +6,35 @@
                 <div class="p-6 bg-white border-b border-gray-200">
                     
 
-                <div class ="container mx-10 my-20">
-  <table border=0  >
-    <td width=500 >
-    <p class="h3" >
-    5_完全一致移行
-    </p>
-    </td>
-    <!--
-    <td width=750>
-      -->
+                <div class ="container mx-10">
 
-
-    <td width=170 rowspan=2>
-      <table border=0  align=center>
-        <td align="center">
-          <font color =blue>
-      <使い方動画>
-        </font>
-      </td>
-        <tr>
-      <td align="center">
-            <a href="https://youtu.be/pjNnx7-JSHM" target="_blank">5_完全一致移行<a/>
-      </td>
-      <tr>
-      <td align="center">
-        <img border="0"  src="http://emarc-tool.com/static/qr/5_%E5%AE%8C%E5%85%A8%E4%B8%80%E8%87%B4%E7%A7%BB%E8%A1%8C.png" width="160">
-      </td>
-      </table>
-
-    </td><tr height=50>
-
-  <td></td>
-
-  </table>
+                  <div class="container-fluid mx-20 my-10">
+                    <td width=170 rowspan=2>
+                      <table border=0  align=right>
+      
+                        <td align="center">
+                          <font color =blue>
+                          <使い方動画>
+                          </font>
+                        </td>
+                        <tr>
+                        <td align="center">
+                              <a href="https://youtu.be/pjNnx7-JSHM" target="_blank">5_完全一致移行<a/>
+                        </td>
+                        <tr>
+                        <td align="center">
+                          <img border="0"  src="http://emarc-tool.com/static/qr/5_%E5%AE%8C%E5%85%A8%E4%B8%80%E8%87%B4%E7%A7%BB%E8%A1%8C.png" width="160">
+                        </td>
+                      </table>
+                      </td>
+                  </div>
 
 <div class="container-fluid">
-<form action="excel/upload5" method="post" enctype="multipart/form-data">
+
+<font size =5 color = "black "> 
+5_完全一致移行
+</font>
+<form action="excel/upload5" method="post" enctype="multipart/form-data" class="my-10">
   @csrf
   <strong>
     <table >

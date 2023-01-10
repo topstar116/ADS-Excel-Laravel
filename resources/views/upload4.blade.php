@@ -6,42 +6,33 @@
                 <div class="p-6 bg-white border-b border-gray-200">
                     
 
-                <div class ="container mx-10 my-20">
-  <table border=0  >
-    <td width=500 >
-    <p class="h3" >
-    4_マニュアル保留設定
-    </p>
-    </td>
-    <!--
-    <td width=750>
-      -->
+                <div class ="container mx-10">
 
+                  <div class="container-fluid  my-10 mx-20">
+                    <td width=170 rowspan=2>
+                      <table border=0  align=right>
+                        <td align="center">
+                          <font color =blue>
+                        <使い方動画>
+                          </font>
+                        </td>
+                          <tr>
+                        <td align="center">
+                              <a href="https://youtu.be/z95C115V3n4" target="_blank">4_マニュアル保留設定<a/>
+                        </td>
+                        <tr>
+                        <td align="center">
+                          <img border="0"  src="http://emarc-tool.com/static/qr/4_%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB%E4%BF%9D%E7%95%99%E8%A8%AD%E5%AE%9A.png" width="160">
+                        </td>
+                      </table>
+                    </td>
+                  </div>
 
-    <td width=170 rowspan=2>
-      <table border=0  align=center>
-        <td align="center">
-          <font color =blue>
-      <使い方動画>
-        </font>
-      </td>
-        <tr>
-      <td align="center">
-            <a href="https://youtu.be/z95C115V3n4" target="_blank">4_マニュアル保留設定<a/>
-      </td>
-      <tr>
-      <td align="center">
-        <img border="0"  src="http://emarc-tool.com/static/qr/4_%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB%E4%BF%9D%E7%95%99%E8%A8%AD%E5%AE%9A.png" width="160">
-      </td>
-      </table>
-
-    </td><tr height=50>
-
-  <td></td>
-
-  </table>
 <div class="container-fluid">
-<form action="excel/upload4" method="post" enctype="multipart/form-data">
+<font size =5 color = "black "> 
+4_マニュアル保留設定
+</font>
+<form action="excel/upload4" method="post" enctype="multipart/form-data" class="my-10">
   @csrf
   <strong>
     <table>

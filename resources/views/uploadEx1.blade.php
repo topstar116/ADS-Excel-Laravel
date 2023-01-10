@@ -5,45 +5,36 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
                     
+                <div class ="container mx-10">
 
-                <div class ="container mx-10 my-20">
-  <table border=0  >
-    <td width=500 >
-    <p class="h3" >
-    Ex1_広告費削減施策P1
-    </p>
+                  <div class="container-fluid mx-20 my-10">
+                    <td width=170 rowspan=2>
+                      <table border=0  align=right>
+                          <td align="center">
+                            <font color =blue>
+                        <使い方動画>
+                          </font>
+                        </td>
+                          <tr>
+                        <td align="center">
+                              <a href="https://youtu.be/lBHwj5TCzWM" target="_blank">Ex1_広告費削減施策<a/>
+                        </td>
+                        <tr>
+                        <td align="center">
+                          <img border="0"  src="http://emarc-tool.com/static/qr/Ex1_%E5%BA%83%E5%91%8A%E8%B2%BB%E5%89%8A%E6%B8%9B%E6%96%BD%E7%AD%96.png" width="160">
+                        </td>
+                      </table>
+                    </td>
+                  </div>
 
-    </td>
-    <!--
-    <td width=750>
-      -->
 
 
-    <td width=170 rowspan=2>
-      <table border=0  align=center>
-        <td align="center">
-          <font color =blue>
-      <使い方動画>
-        </font>
-      </td>
-        <tr>
-      <td align="center">
-            <a href="https://youtu.be/lBHwj5TCzWM" target="_blank">Ex1_広告費削減施策<a/>
-      </td>
-      <tr>
-      <td align="center">
-        <img border="0"  src="http://emarc-tool.com/static/qr/Ex1_%E5%BA%83%E5%91%8A%E8%B2%BB%E5%89%8A%E6%B8%9B%E6%96%BD%E7%AD%96.png" width="160">
-      </td>
-      </table>
-
-    </td><tr height=50>
-
-  <td></td>
-
-  </table>
 <div class="container-fluid">
+<font size =5 color = "black "> 
+Ex1_広告費削減施策P1
+</font>
 
-<form action="{{ route('uploadEx1_post') }}" name="form" method="post" enctype="multipart/form-data">
+<form action="{{ route('uploadEx1_post') }}" name="form" method="post" enctype="multipart/form-data" class="my-10">
     @csrf
     <strong>
       <table>

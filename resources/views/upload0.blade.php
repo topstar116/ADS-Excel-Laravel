@@ -5,42 +5,38 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">                    
 
-                <div class ="container mx-10 my-20">
-                  <table border=0  >
-                    <td width=500 >
-                      <p class="h3" >
-                        Ex0_新規広告作成
-                      </p>
-                    </td>
+                <div class ="container mx-10">
+                  <div class="container-fluid mx-10  my-10">
                     <td width=170 rowspan=2>
-                      <table border=0  align=center>
+                      <table border=0  align=right>
                         <td align="center">
                           <font color =blue>
                             <使い方動画>
                           </font>
                         </td>
                       <tr>
-                    <td align="center">
-                          <a href="https://youtu.be/I6jm5p4TRdE" target="_blank">Ex0_新規広告作成<a/>
+                        <td align="center">
+                              <a href="https://youtu.be/I6jm5p4TRdE" target="_blank">Ex0_新規広告作成<a/>
+                        </td>
+                        <tr>
+                        <td align="center">
+                          <img border="0"  src="http://emarc-tool.com/static/qr/Ex0_%E6%96%B0%E8%A6%8F%E5%BA%83%E5%91%8A%E4%BD%9C%E6%88%90.png" width="160">
+                        </td>
+                        <tr>
+                        <td>
+                          <a> 新規広告作成用テンプレートは</a>
+                          <a style="color:blue" href="http://emarc-tool.com/static/0_%E6%96%B0%E8%A6%8F%E5%BA%83%E5%91%8A%E4%BD%9C%E6%88%90%E3%83%86%E3%83%B3%E3%83%95%E3%82%9A%E3%83%AC%E3%83%BC%E3%83%88.xlsx">  こちら</a>
+                        </td>
+                      </table>
                     </td>
-                    <tr>
-                    <td align="center">
-                      <img border="0"  src="http://emarc-tool.com/static/qr/Ex0_%E6%96%B0%E8%A6%8F%E5%BA%83%E5%91%8A%E4%BD%9C%E6%88%90.png" width="160">
-                    </td>
-                    </table>
-
-                  </td><tr height=50>
-
-                <td>
-                  <a> 新規広告作成用テンプレートは</a>
-                  <a href="http://emarc-tool.com/static/0_%E6%96%B0%E8%A6%8F%E5%BA%83%E5%91%8A%E4%BD%9C%E6%88%90%E3%83%86%E3%83%B3%E3%83%95%E3%82%9A%E3%83%AC%E3%83%BC%E3%83%88.xlsx">  こちら</a>
-                </td>
-
-                </table>
+                  </div>
 
                 <div class="container-fluid">
-
-                  <form action="excel/upload0" name="form" method="post" enctype="multipart/form-data">
+                  <font size =5 color = "black "> 
+                    Ex0_新規広告作成
+                  </font>
+                  
+                  <form action="excel/upload0" name="form" method="post" enctype="multipart/form-data" class="my-10">
                       
                       @csrf
                       <strong>

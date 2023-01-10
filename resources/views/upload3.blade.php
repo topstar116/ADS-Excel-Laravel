@@ -6,44 +6,40 @@
                 <div class="p-6 bg-white border-b border-gray-200">
                     
 
-                <div class ="container mx-10 my-20">
+                <div class ="container mx-10 my-10">
 
-  <table border=0  >
-    <td width=500 >
-    <p class="h3" >
-    3_入札額調整
-    </p>
-    </td>
-    <!--
-    <td width=750>
-      -->
-
-
-    <td width=170 rowspan=2>
-      <table border=0  align=center>
-        <td align="center">
-          <font color =blue>
-      <使い方動画>
-        </font>
-      </td>
-        <tr>
-      <td align="center">
-            <a href="https://youtu.be/5Km7TrxSf6M" target="_blank">3_入札額調整<a/>
-      </td>
-      <tr>
-      <td align="center">
-        <img border="0"  src="http://emarc-tool.com/static/qr/3_%E5%85%A5%E6%9C%AD%E9%A1%8D%E8%AA%BF%E6%95%B4.png" width="160">
-      </td>
-      </table>
-
-    </td><tr height=50>
-
-  <td></td>
-
-  </table>
+                  <div class="container-fluid mx-10">
+                    <td width=170 rowspan=2>
+                      <table border=0  align=right>
+                        <td align="center">
+                          <font color =blue>
+                      <使い方動画>
+                        </font>
+                      </td>
+                        <tr>
+                      <td align="center">
+                            <a href="https://youtu.be/5Km7TrxSf6M" target="_blank">3_入札額調整<a/>
+                      </td>
+                      <tr>
+                      <td align="center">
+                        <img border="0"  src="http://emarc-tool.com/static/qr/3_%E5%85%A5%E6%9C%AD%E9%A1%8D%E8%AA%BF%E6%95%B4.png" width="160">
+                      </td>
+                      <tr>
+                      <td align="center">
+                        <a href="http://emarc-tool.com/static/3_%E5%85%A5%E6%9C%AD%E9%A1%8D%E8%AA%BF%E6%95%B4%E7%AF%84%E5%9B%B2.jpg" target="_blank">
+                          <img border="0" src="http://emarc-tool.com/static/3_%E5%85%A5%E6%9C%AD%E9%A1%8D%E8%AA%BF%E6%95%B4%E7%AF%84%E5%9B%B2.jpg" width="520">
+                          <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp クリックすると拡大します。
+                        </a>
+                      </td>
+                      </table>
+                    </td>
+                  </div>
 
 <div class="container-fluid">
-<form action="excel/upload3" method="post" enctype="multipart/form-data">
+<font size =5 color = "black "> 
+3_入札額調整
+</font>
+<form action="excel/upload3" method="post" enctype="multipart/form-data" class="my-10">
   @csrf
   <strong>
     <table>
@@ -66,15 +62,7 @@
     </td>
     <td>
       <input type="number" name="impression1" value="1000" placeholder="1000" required id="id_impression1"> 以上
-    </td>
-    <td rowspan=7 align="center">
-      <a href="http://emarc-tool.com/static/3_%E5%85%A5%E6%9C%AD%E9%A1%8D%E8%AA%BF%E6%95%B4%E7%AF%84%E5%9B%B2.jpg" target="_blank">
-         <img border="0" src="http://emarc-tool.com/static/3_%E5%85%A5%E6%9C%AD%E9%A1%8D%E8%AA%BF%E6%95%B4%E7%AF%84%E5%9B%B2.jpg" width="520">
-         <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp クリックすると拡大します。
-      </a>
-
-
-    </td>
+    </td>   
 
       <tr>
         <td>

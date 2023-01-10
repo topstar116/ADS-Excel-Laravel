@@ -7,42 +7,33 @@
                     
 
                 <div class ="container mx-10 my-20">
-                  <table border=0 >
-                    <td width=500 >
-                    <p class="h3" >
-                    1_オート広告除外
-                    </p>
-
-                    </td>
-                    <!--
-                    <td width=750>
-                      -->
-
-
+                  <div class="container-fluid mx-20">
                     <td width=170 rowspan=2>
-                      <table border=0  align=center>
+                      <table border=0  align=right>
                         <td align="center">
                           <font color =blue>
-                      <使い方動画>
-                        </font>
-                      </td>
+                            <使い方動画>
+                          </font>
+                        </td>
                         <tr>
-                      <td align="center" >
-                            <a href="https://youtu.be/p30XUIBIZ3g" target="_blank">1_オート広告除外<a/>
-                      </td>
-                      <tr>
-                      <td align="center">
-                        <img border="0"  src="http://emarc-tool.com/static/qr/1_%E3%82%AA%E3%83%BC%E3%83%88%E5%BA%83%E5%91%8A%E9%99%A4%E5%A4%96.png" width="160">
-                      </td>
+                        <td align="center" >
+                          <a href="https://youtu.be/p30XUIBIZ3g" target="_blank">1_オート広告除外<a/>
+                        </td>
+                        <tr>
+                        <td align="center">
+                          <img border="0"  src="http://emarc-tool.com/static/qr/1_%E3%82%AA%E3%83%BC%E3%83%88%E5%BA%83%E5%91%8A%E9%99%A4%E5%A4%96.png" width="160">
+                        </td>
                       </table>
+                    </td>
+                  </div>
 
-                    </td><tr height=50>
-
-                  <td></td>
-
-                  </table>
                   <div class="container-fluid">
-                    <form action="excel/upload1" method="post" enctype="multipart/form-data">
+
+                    <font size =5 color = "black "> 
+                      1_オート広告除外
+                    </font>
+
+                    <form action="excel/upload1" method="post" enctype="multipart/form-data" class="my-10">
 
                       @csrf  
                       <strong>

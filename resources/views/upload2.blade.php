@@ -6,41 +6,34 @@
                 <div class="p-6 bg-white border-b border-gray-200">
                     
 
-                <div class ="container mx-10 my-20">  <table border=0  >
-    <td width=500 >
-    <p class="h3" >
-    2_キーワード仕入れ
-    </p>
-    </td>
-    <!--
-    <td width=750>
-      -->
+                <div class ="container mx-10 my-10">
 
+                  <div class="container-fluid mx-20">
+                    <td width=170 rowspan=2>
+                      <table border=0  align=right>
+                        <td align="center">
+                          <font color =blue>
+                        <使い方動画>
+                          </font>
+                        </td>
+                          <tr>
+                            <td align="center">
+                                  <a href="https://youtu.be/BA_hm8pvRfs" target="_blank">2_キーワード仕入れ<a/>
+                            </td>
+                          <tr>
+                        <td align="center">
+                          <img border="0"  src="http://emarc-tool.com/static/qr/2_%E3%82%AD%E3%83%BC%E3%83%AF%E3%83%BC%E3%83%88%E3%82%99%E4%BB%95%E5%85%A5%E3%82%8C.png" width="160">
+                        </td>
+                      </table>
+                    </td>
+                  </div>
+                  
 
-    <td width=170 rowspan=2>
-      <table border=0  align=center>
-        <td align="center">
-          <font color =blue>
-      <使い方動画>
-        </font>
-      </td>
-        <tr>
-      <td align="center">
-            <a href="https://youtu.be/BA_hm8pvRfs" target="_blank">2_キーワード仕入れ<a/>
-      </td>
-      <tr>
-      <td align="center">
-        <img border="0"  src="http://emarc-tool.com/static/qr/2_%E3%82%AD%E3%83%BC%E3%83%AF%E3%83%BC%E3%83%88%E3%82%99%E4%BB%95%E5%85%A5%E3%82%8C.png" width="160">
-      </td>
-      </table>
-
-    </td><tr height=50>
-
-  <td></td>
-
-  </table>
 <div class="container-fluid">
-<form action="excel/upload2" method="post" enctype="multipart/form-data">
+<font size =5 color = "black "> 
+2_キーワード仕入れ
+</font>
+<form action="excel/upload2" method="post" enctype="multipart/form-data" class="my-10">
   @csrf
   <strong>
     <table>
