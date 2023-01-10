@@ -197,7 +197,7 @@ class ExcelController extends Controller
             else if($click_through < $click_through4 && $row[18] > $impression1) $UP = 3;
             else continue;
             
-            if($row[1]=='広告グループ') Upload1::insert(['キャンペーン'=>$row[3], '広告グループ'=>$row[9], '入札額上限'=>round($CPC+3), 'キーワードまたは商品ターゲティング'=>$row[11], 'マッチタイプ'=>$N, '広告グループステータス'=>'有効', 'ステータス'=>'']);
+            if($row[1]=='広告グループ') Upload1::insert(['キャンペーン'=>$row[3], '広告グループ'=>$row[9], '入札額上限'=>round($CPC+3), 'キーワードまたは商品ターゲティング'=>'', 'マッチタイプ'=>'', '広告グループステータス'=>'有効', 'ステータス'=>'']);
             else Upload1::insert(['キャンペーン'=>$row[3], '広告グループ'=>$row[9], '入札額上限'=>round($CPC+$UP), 'キーワードまたは商品ターゲティング'=>$row[11], 'マッチタイプ'=>$N, '広告グループステータス'=>'有効', 'ステータス'=>'有効']);
 
         }
