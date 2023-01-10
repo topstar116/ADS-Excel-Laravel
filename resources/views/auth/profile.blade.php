@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('My profile') }}
+            {{ __('プロフィール') }}
         </h2>
     </x-slot>
 
@@ -19,7 +19,7 @@
                         @method('PUT')
 
                         <div>
-                            <x-label for="name" :value="__('ID')"/>
+                            <x-label for="name" :value="__('名前')"/>
 
                             <x-input id="name" class="block mt-1 w-full" type="text" name="name"
                                      :value="old('name', auth()->user()->name)" required/>

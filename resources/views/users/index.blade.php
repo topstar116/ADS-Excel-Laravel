@@ -92,7 +92,7 @@
                                     <p class="text-gray-900 whitespace-no-wrap">{{ $user->pwd }}</p>
                                 </td>
                                 <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                    <form method="GET" action="{{ route('del.user') }}">
+                                    <form method="POST" action="{{ route('del.user') }}">
                                         <span class="relative inline-block px-3 py-1 font-semibold text-red-900 leading-tight">
                                             <span aria-hidden class="absolute inset-0 bg-red-200 opacity-50 rounded-full"></span>
                                             <input type="hidden" name="user_id" value="{{ $user->id }}">

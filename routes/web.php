@@ -51,7 +51,7 @@ Route::middleware('auth')->group(function () {
 
     Route::get('users', [UserController::class, 'index'])->name('users');
     Route::post('add/user', [UserController::class, 'addUser'])->name('add.user');
-    Route::get('del/user', [UserController::class, 'delUser'])->name('del.user');
+    Route::post('del/user', [UserController::class, 'delUser'])->name('del.user');
 
     Route::get('profile', [\App\Http\Controllers\ProfileController::class, 'show'])->name('profile.show');
     Route::put('profile', [\App\Http\Controllers\ProfileController::class, 'update'])->name('profile.update');
