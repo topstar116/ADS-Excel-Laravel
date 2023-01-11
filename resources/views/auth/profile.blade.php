@@ -35,14 +35,14 @@
                         <div class="mt-4">
                             <x-label for="password" :value="__('パスワード')"/>
 
-                            <x-input id="password" class="block mt-1 w-full" type="password" name="password"/>
+                            <x-input id="password" class="block mt-1 w-full" type="password" name="password" required/>
                         </div>
 
                         <div class="mt-4">
                             <x-label for="password_confirmation" :value="__('パスワード確認')"/>
 
                             <x-input id="password_confirmation" class="block mt-1 w-full" type="password"
-                                     name="password_confirmation"/>
+                                     name="password_confirmation" required/>
                         </div>
 
                         <x-button class="mt-4">
