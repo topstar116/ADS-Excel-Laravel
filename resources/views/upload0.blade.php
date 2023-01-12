@@ -20,7 +20,7 @@
                         </td>
                         <tr>
                         <td align="center">
-                          <img border="0"  src="http://emarc-tool.com/static/qr/Ex0_%E6%96%B0%E8%A6%8F%E5%BA%83%E5%91%8A%E4%BD%9C%E6%88%90.png" width="160">
+                          <img border="0"  src="{{ asset('qrcode/qr0.png')}}" width="160">
                         </td>
                         <tr>
                         <td>
