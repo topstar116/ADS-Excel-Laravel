@@ -17,7 +17,7 @@
                         </td>
                           <tr>
                         <td align="center">
-                              <a href="https://youtu.be/lBHwj5TCzWM" target="_blank">Ex1_広告費削減施策<a/>
+                              <a href="https://youtu.be/wFeIstkxrWI" target="_blank">Ex1_広告費削減施策<a/>
                         </td>
                         <tr>
                         <td align="center">

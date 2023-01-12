@@ -19,7 +19,7 @@
                         </td>
                         <tr>
                         <td align="center">
-                              <a href="https://youtu.be/pjNnx7-JSHM" target="_blank">5_完全一致移行<a/>
+                              <a href="https://youtu.be/7qny4ME4Bro" target="_blank">5_完全一致移行<a/>
                         </td>
                         <tr>
                         <td align="center">

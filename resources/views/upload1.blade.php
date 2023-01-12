@@ -17,7 +17,7 @@
                         </td>
                         <tr>
                         <td align="center" >
-                          <a href="https://youtu.be/p30XUIBIZ3g" target="_blank">1_オート広告除外<a/>
+                          <a href="https://youtu.be/mNGczFCPRbE" target="_blank">1_オート広告除外<a/>
                         </td>
                         <tr>
                         <td align="center">

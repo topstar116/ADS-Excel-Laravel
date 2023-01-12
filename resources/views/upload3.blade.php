@@ -18,7 +18,7 @@
                       </td>
                         <tr>
                       <td align="center">
-                            <a href="https://youtu.be/5Km7TrxSf6M" target="_blank">3_入札額調整<a/>
+                            <a href="https://youtu.be/gYunJ5KgCTk" target="_blank">3_入札額調整<a/>
                       </td>
                       <tr>
                       <td align="center">

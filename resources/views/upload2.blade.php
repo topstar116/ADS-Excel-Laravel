@@ -18,7 +18,7 @@
                         </td>
                           <tr>
                             <td align="center">
-                                  <a href="https://youtu.be/BA_hm8pvRfs" target="_blank">2_キーワード仕入れ<a/>
+                                  <a href="https://youtu.be/_QBb_nUWW2Q" target="_blank">2_キーワード仕入れ<a/>
                             </td>
                           <tr>
                         <td align="center">

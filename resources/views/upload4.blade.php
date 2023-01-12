@@ -18,7 +18,7 @@
                         </td>
                           <tr>
                         <td align="center">
-                              <a href="https://youtu.be/z95C115V3n4" target="_blank">4_マニュアル保留設定<a/>
+                              <a href="https://youtu.be/WmF7NnTw_x4" target="_blank">4_マニュアル保留設定<a/>
                         </td>
                         <tr>
                         <td align="center">

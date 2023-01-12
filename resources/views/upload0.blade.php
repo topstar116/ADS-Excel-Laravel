@@ -16,7 +16,7 @@
                         </td>
                       <tr>
                         <td align="center">
-                              <a href="https://youtu.be/I6jm5p4TRdE" target="_blank">Ex0_新規広告作成<a/>
+                              <a href="https://youtu.be/9c4SOSdk62M" target="_blank">Ex0_新規広告作成<a/>
                         </td>
                         <tr>
                         <td align="center">
