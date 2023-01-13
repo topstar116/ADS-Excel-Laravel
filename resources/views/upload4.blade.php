@@ -22,7 +22,7 @@
                         </td>
                         <tr>
                         <td align="center">
-                          <img border="0"  src="{{ asset('qrcode/qr4.png')}}" width="160">
+                          <img border="0"  src="{{ asset('qrcode/QR_4 マニュアル保留設定 解説動画.png')}}" width="160">
                         </td>
                       </table>
                     </td>

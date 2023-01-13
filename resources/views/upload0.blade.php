@@ -20,7 +20,7 @@
                         </td>
                         <tr>
                         <td align="center">
-                          <img border="0"  src="{{ asset('qrcode/qr0.png')}}" width="160">
+                          <img border="0"  src="{{ asset('qrcode/QR_Ex0 新規広告作成 解説動画.png')}}" width="160">
                         </td>
                         <tr>
                         <td>
