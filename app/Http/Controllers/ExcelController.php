@@ -259,7 +259,7 @@ class ExcelController extends Controller
 
         foreach ($sheets[1] as $row) {        
             
-            if($row[19]=='クリック' || mb_substr($row[3],0,1,"UTF-8")!='P' || $row[18] ==0 || $row[19] ==0) continue;
+            if($row[10] == '入札額上限' || $row[19]=='クリック' || mb_substr($row[3],0,1,"UTF-8")!='P' || $row[18] ==0 || $row[19] ==0) continue;
 
             $click_rate = $row[19]/$row[18]*100;
             $conversion_rate = $row[21]/$row[19]*100;
