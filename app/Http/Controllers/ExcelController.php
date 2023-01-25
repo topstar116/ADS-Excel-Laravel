@@ -14,7 +14,11 @@ class ExcelController extends Controller
 
     public function upload0(Request $request)
     {
-        $checkbox_target = $request->input('checkbox_target');
+        $A = $request->input('A');
+        $P = $request->input('P');
+        $E = $request->input('E');
+        $G = $request->input('G');
+
         $cmp_price = $request->input('cmp_price');
         $bid = round($request->input('bid'));
         $cmp_sep = $request->input('cmp_sep');
@@ -24,46 +28,47 @@ class ExcelController extends Controller
         
         Upload1::getQuery()->delete();
 
-            foreach ($sheets[0] as $row) {           
+            if($A != NULL){
+                foreach ($sheets[0] as $row) {           
 
-                if($row[3] == '子SKU') continue;
-                if($row[3] == '') break;
-                
-                //A
-                Upload1::insert(['キャンペーン'=>'A'.$cmp_sep.$row[1].$row[2], 'キャンペーンの1日の予算'=>$cmp_price, 'キャンペーン開始日'=>date('Y/m/d'), 'キャンペーンターゲティングタイプ'=>'auto', 'キャンペーンステータス'=>'有効', '入札戦略'=>'動的な入札（ダウンのみ）']);
-                Upload1::insert(['キャンペーン'=>'A'.$cmp_sep.$row[1].$row[2], '広告グループ'=>'広告グループ 1', '入札額上限'=>$bid, 'キャンペーンステータス'=>'有効', '広告グループステータス'=>'有効']);
-                Upload1::insert(['キャンペーン'=>'A'.$cmp_sep.$row[1].$row[2], '広告グループ'=>'広告グループ 1', 'SKU'=>$row[3], 'キャンペーンステータス'=>'有効', '広告グループステータス'=>'有効', 'ステータス'=>'有効']);
-            }
-
-            foreach ($sheets[0] as $row) {      
-                if($row[3] == '子SKU') continue;
-                if($row[3] == '') break;     
-                //P
-                Upload1::insert(['キャンペーン'=>'P'.$cmp_sep.$row[1].$row[2], 'キャンペーンの1日の予算'=>$cmp_price, 'キャンペーン開始日'=>date('Y/m/d'), 'キャンペーンターゲティングタイプ'=>'manual', 'キャンペーンステータス'=>'有効', '入札戦略'=>'動的な入札（ダウンのみ）']);
-                Upload1::insert(['キャンペーン'=>'P'.$cmp_sep.$row[1].$row[2], '広告グループ'=>'広告グループ 1', '入札額上限'=>$bid, 'キャンペーンステータス'=>'有効', '広告グループステータス'=>'有効']);
-                Upload1::insert(['キャンペーン'=>'P'.$cmp_sep.$row[1].$row[2], '広告グループ'=>'広告グループ 1', 'SKU'=>$row[3], 'キャンペーンステータス'=>'有効', '広告グループステータス'=>'有効', 'ステータス'=>'有効']);
-
-                if($def_keyword != ''){
-                    Upload1::insert(['キャンペーン'=>'P'.$cmp_sep.$row[1].$row[2], '広告グループ'=>'広告グループ 1', '入札額上限'=>$bid, 'キーワードまたは商品ターゲティング'=>$def_keyword, 'マッチタイプ'=>'Phrase', 'キャンペーンステータス'=>'有効', '広告グループステータス'=>'有効', 'ステータス'=>'有効']);
-                }
-            }
-
-            foreach ($sheets[0] as $row) {     
-                if($row[3] == '子SKU') continue;
-                if($row[3] == '') break;      
-                //E
-                Upload1::insert(['キャンペーン'=>'E'.$cmp_sep.$row[1].$row[2], 'キャンペーンの1日の予算'=>$cmp_price, 'キャンペーン開始日'=>date('Y/m/d'), 'キャンペーンターゲティングタイプ'=>'manual', 'キャンペーンステータス'=>'有効', '入札戦略'=>'動的な入札（ダウンのみ）']);
-                Upload1::insert(['キャンペーン'=>'E'.$cmp_sep.$row[1].$row[2], '広告グループ'=>'広告グループ 1', '入札額上限'=>$bid, 'キャンペーンステータス'=>'有効', '広告グループステータス'=>'有効']);
-                Upload1::insert(['キャンペーン'=>'E'.$cmp_sep.$row[1].$row[2], '広告グループ'=>'広告グループ 1', 'SKU'=>$row[3], 'キャンペーンステータス'=>'有効', '広告グループステータス'=>'有効', 'ステータス'=>'有効']);
-
-                if($def_keyword != ''){
-                    Upload1::insert(['キャンペーン'=>'E'.$cmp_sep.$row[1].$row[2], '広告グループ'=>'広告グループ 1', '入札額上限'=>$bid, 'キーワードまたは商品ターゲティング'=>$def_keyword, 'マッチタイプ'=>'Exact', 'キャンペーンステータス'=>'有効', '広告グループステータス'=>'有効', 'ステータス'=>'有効']);
-                }
-            }
-
-            if($checkbox_target != NULL){
-                
+                    if($row[3] == '子SKU') continue;
+                    if($row[3] == '') break;
                     
+                    //A
+                    Upload1::insert(['キャンペーン'=>'A'.$cmp_sep.$row[1].$row[2], 'キャンペーンの1日の予算'=>$cmp_price, 'キャンペーン開始日'=>date('Y/m/d'), 'キャンペーンターゲティングタイプ'=>'auto', 'キャンペーンステータス'=>'有効', '入札戦略'=>'動的な入札（ダウンのみ）']);
+                    Upload1::insert(['キャンペーン'=>'A'.$cmp_sep.$row[1].$row[2], '広告グループ'=>'広告グループ 1', '入札額上限'=>$bid, 'キャンペーンステータス'=>'有効', '広告グループステータス'=>'有効']);
+                    Upload1::insert(['キャンペーン'=>'A'.$cmp_sep.$row[1].$row[2], '広告グループ'=>'広告グループ 1', 'SKU'=>$row[3], 'キャンペーンステータス'=>'有効', '広告グループステータス'=>'有効', 'ステータス'=>'有効']);
+                }
+            }
+            if($P != NULL){
+                foreach ($sheets[0] as $row) {      
+                    if($row[3] == '子SKU') continue;
+                    if($row[3] == '') break;     
+                    //P
+                    Upload1::insert(['キャンペーン'=>'P'.$cmp_sep.$row[1].$row[2], 'キャンペーンの1日の予算'=>$cmp_price, 'キャンペーン開始日'=>date('Y/m/d'), 'キャンペーンターゲティングタイプ'=>'manual', 'キャンペーンステータス'=>'有効', '入札戦略'=>'動的な入札（ダウンのみ）']);
+                    Upload1::insert(['キャンペーン'=>'P'.$cmp_sep.$row[1].$row[2], '広告グループ'=>'広告グループ 1', '入札額上限'=>$bid, 'キャンペーンステータス'=>'有効', '広告グループステータス'=>'有効']);
+                    Upload1::insert(['キャンペーン'=>'P'.$cmp_sep.$row[1].$row[2], '広告グループ'=>'広告グループ 1', 'SKU'=>$row[3], 'キャンペーンステータス'=>'有効', '広告グループステータス'=>'有効', 'ステータス'=>'有効']);
+
+                    if($def_keyword != ''){
+                        Upload1::insert(['キャンペーン'=>'P'.$cmp_sep.$row[1].$row[2], '広告グループ'=>'広告グループ 1', '入札額上限'=>$bid, 'キーワードまたは商品ターゲティング'=>$def_keyword, 'マッチタイプ'=>'Phrase', 'キャンペーンステータス'=>'有効', '広告グループステータス'=>'有効', 'ステータス'=>'有効']);
+                    }
+                }
+            }
+            if($E != NULL){
+                foreach ($sheets[0] as $row) {     
+                    if($row[3] == '子SKU') continue;
+                    if($row[3] == '') break;      
+                    //E
+                    Upload1::insert(['キャンペーン'=>'E'.$cmp_sep.$row[1].$row[2], 'キャンペーンの1日の予算'=>$cmp_price, 'キャンペーン開始日'=>date('Y/m/d'), 'キャンペーンターゲティングタイプ'=>'manual', 'キャンペーンステータス'=>'有効', '入札戦略'=>'動的な入札（ダウンのみ）']);
+                    Upload1::insert(['キャンペーン'=>'E'.$cmp_sep.$row[1].$row[2], '広告グループ'=>'広告グループ 1', '入札額上限'=>$bid, 'キャンペーンステータス'=>'有効', '広告グループステータス'=>'有効']);
+                    Upload1::insert(['キャンペーン'=>'E'.$cmp_sep.$row[1].$row[2], '広告グループ'=>'広告グループ 1', 'SKU'=>$row[3], 'キャンペーンステータス'=>'有効', '広告グループステータス'=>'有効', 'ステータス'=>'有効']);
+
+                    if($def_keyword != ''){
+                        Upload1::insert(['キャンペーン'=>'E'.$cmp_sep.$row[1].$row[2], '広告グループ'=>'広告グループ 1', '入札額上限'=>$bid, 'キーワードまたは商品ターゲティング'=>$def_keyword, 'マッチタイプ'=>'Exact', 'キャンペーンステータス'=>'有効', '広告グループステータス'=>'有効', 'ステータス'=>'有効']);
+                    }
+                }              
+            }  
+            if($G != NULL){        
                 foreach ($sheets[0] as $row) {    
                     if($row[3] == '子SKU') continue;
                     if($row[3] == '') break;       
@@ -72,7 +77,6 @@ class ExcelController extends Controller
                     Upload1::insert(['キャンペーン'=>'G'.$cmp_sep.$row[1].$row[2], '広告グループ'=>'広告グループ 1', '入札額上限'=>$bid, 'キャンペーンステータス'=>'有効', '広告グループステータス'=>'有効']);
                     Upload1::insert(['キャンペーン'=>'G'.$cmp_sep.$row[1].$row[2], '広告グループ'=>'広告グループ 1', 'SKU'=>$row[3], 'キャンペーンステータス'=>'有効', '広告グループステータス'=>'有効', 'ステータス'=>'有効']);
                     Upload1::insert(['キャンペーン'=>'G'.$cmp_sep.$row[1].$row[2], '広告グループ'=>'広告グループ 1', '入札額上限'=>$bid, 'キーワードまたは商品ターゲティング'=>'asin＝"'.$row[1].'"','商品ターゲティングID'=>'asin＝"'.$row[1].'"', 'マッチタイプ'=>'ターゲティングエクスプレッション', 'キャンペーンステータス'=>'有効', '広告グループステータス'=>'有効', 'ステータス'=>'有効']);
-
                 }
             }
 
@@ -178,28 +182,41 @@ class ExcelController extends Controller
 
         foreach ($sheets[1] as $row) {           
 
-            if($row[19]=='クリック' || !(mb_substr($row[3],0,1)=='A' || mb_substr($row[3],0,1)=='P' || mb_substr($row[3],0,1)=='E') || $row[18] ==0 || $row[19] ==0) continue;
-            if(mb_substr($row[3],0,1)=='A' && $row[1]!='広告グループ') continue;
+            if($row[19]=='クリック' || !(mb_substr($row[3],0,1)=='A' || mb_substr($row[3],0,1)=='P' || mb_substr($row[3],0,1)=='E' || mb_substr($row[3],0,1)=='G') || $row[18] ==0 || $row[19] ==0) continue;
             if($checkbox_target==NULL && !($row[1]=='キーワード' || $row[1]=='広告グループ')) continue;
+            if($checkbox_target==NULL && mb_substr($row[3],0,1)=='G') continue;
             if($checkbox_target!=NULL && !($row[1]=='キーワード' || $row[1]=='商品ターゲティング' || $row[1]=='広告グループ')) continue;
 
             $click_through = $row[19]/$row[18]*100;
             $CPC = $row[20]/$row[19];
 
-            $N = '';
-            if(mb_substr($row[3], 0, 1, "UTF-8")=='P') $N = 'Phrase';
-            if(mb_substr($row[3], 0, 1, "UTF-8")=='E') $N = 'Exact';
-            
-            if($click_through > $click_through1 && $row[18] < $impression2) $UP = 6;
-            else if($click_through > $click_through2 && $row[18] > $impression2) $UP = 3;
+            $M = '';
+            $N = $row[13];
+            $UP = 0;
 
-            else if($click_through3 < $click_through && $click_through < $click_through2 && $row[18] > $impression1) $UP = 2;
-            else if($click_through4 < $click_through && $click_through < $click_through3 && $row[18] > $impression1) $UP = -2;
+            // if(mb_substr($row[3], 0, 1, "UTF-8")=='P') $N = 'Phrase';
+            // if(mb_substr($row[3], 0, 1, "UTF-8")=='E') $N = 'Exact';
+            
+            if($click_through > $click_through1 && $row[18] < $impression2) $UP = round($CPC+6);
+            else if($click_through > $click_through2 && $row[18] > $impression2) $UP = round($CPC+3);
+
+            else if($click_through3 < $click_through && $click_through < $click_through2 && $row[18] > $impression1) $UP = round($CPC+2);
+            else if($click_through4 < $click_through && $click_through < $click_through3 && $row[18] > $impression1) $UP = round($CPC-2);
             else if($click_through < $click_through4 && $row[18] > $impression1) $UP = 3;
             else continue;
+
+            if(mb_substr($row[3],0,1)=='A') {
+                $UP = round($CPC+3);
+            }
+
+            if(mb_substr($row[3],0,1)=='G') {
+                $M = $row[12];
+            }
+
+            if(mb_substr($row[3],0,1)=='A' && $row[1]=='商品ターゲティング') continue;
             
-            if($row[1]=='広告グループ') Upload1::insert(['キャンペーン'=>$row[3], '広告グループ'=>$row[9], '入札額上限'=>round($CPC+3), 'キーワードまたは商品ターゲティング'=>'', 'マッチタイプ'=>'', '広告グループステータス'=>'有効', 'ステータス'=>'']);
-            else Upload1::insert(['キャンペーン'=>$row[3], '広告グループ'=>$row[9], '入札額上限'=>round($CPC+$UP), 'キーワードまたは商品ターゲティング'=>$row[11], 'マッチタイプ'=>$N, '広告グループステータス'=>'有効', 'ステータス'=>'有効']);
+            if($row[1]=='広告グループ') Upload1::insert(['キャンペーン'=>$row[3], '広告グループ'=>$row[9], '入札額上限'=>$UP, 'キーワードまたは商品ターゲティング'=>'', '商品ターゲティングID'=>'','マッチタイプ'=>'', '広告グループステータス'=>'有効', 'ステータス'=>'']);
+            else Upload1::insert(['キャンペーン'=>$row[3], '広告グループ'=>$row[9], '入札額上限'=>$UP, 'キーワードまたは商品ターゲティング'=>$row[11], '商品ターゲティングID'=>$M, 'マッチタイプ'=>$N, '広告グループステータス'=>'有効', 'ステータス'=>'有効']);
 
         }
 
@@ -229,6 +246,7 @@ class ExcelController extends Controller
 
             if($row[19]=='クリック' || !(mb_substr($row[3],0,1)=='P' || mb_substr($row[3],0,1)=='G') || $row[18] ==0 || $row[19] ==0 || in_array($row[1],$B)) continue;
             if($checkbox_target==NULL && !mb_substr($row[3], 0, 1, "UTF-8")=='P') continue;
+            if($checkbox_target==NULL && mb_substr($row[3], 0, 1, "UTF-8")=='G') continue;
             if($checkbox_target!=NULL && !(mb_substr($row[3], 0, 1, "UTF-8")=='P' || mb_substr($row[3], 0, 1, "UTF-8")=='G')) continue;
 
 
@@ -237,7 +255,7 @@ class ExcelController extends Controller
 
             if($row[18] > $impression && ($click_rate < $click_through || $conversion_rate < $conversion)){
                 
-                Upload1::insert(['キャンペーン'=>$row[3], '広告グループ'=>$row[9], '入札額上限'=>$row[10], 'キーワードまたは商品ターゲティング'=>$row[11], 'マッチタイプ'=>'Phrase', 'ステータス'=>'一時停止']);
+                Upload1::insert(['キャンペーン'=>$row[3], '広告グループ'=>$row[9], '入札額上限'=>$row[10], 'キーワードまたは商品ターゲティング'=>$row[11], 'マッチタイプ'=>$row[13], 'ステータス'=>'一時停止']);
 
             }
 
@@ -259,7 +277,7 @@ class ExcelController extends Controller
 
         foreach ($sheets[1] as $row) {        
             
-            if($row[10] == '入札額上限' || $row[19]=='クリック' || mb_substr($row[3],0,1,"UTF-8")!='P' || $row[18] ==0 || $row[19] ==0) continue;
+            if($row[10] == '' || $row[19]=='クリック' || mb_substr($row[3],0,1,"UTF-8")!='P' || $row[18] ==0 || $row[19] ==0) continue;
 
             $click_rate = $row[19]/$row[18]*100;
             $conversion_rate = $row[21]/$row[19]*100;
@@ -267,6 +285,22 @@ class ExcelController extends Controller
             if($click_rate >  $click_through && $row[18] > $impression && $conversion_rate > $conversion){
             
                 Upload1::insert(['キャンペーン'=>$row[3], '広告グループ'=>$row[9], '入札額上限'=>$row[10], 'キーワードまたは商品ターゲティング'=>$row[11], 'マッチタイプ'=>'Phrase', 'ステータス'=>'一時停止']);
+                // Upload1::insert(['キャンペーン'=>'E'.substr($row[3], 1), '広告グループ'=>$row[9], '入札額上限'=>($row[10]+$bid_add), 'キーワードまたは商品ターゲティング'=>$row[11], 'マッチタイプ'=>'Exact', 'ステータス'=>'有効']);
+
+            }       
+
+        }
+
+        foreach ($sheets[1] as $row) {        
+            
+            if($row[10] == '' || $row[19]=='クリック' || mb_substr($row[3],0,1,"UTF-8")!='P' || $row[18] ==0 || $row[19] ==0) continue;
+
+            $click_rate = $row[19]/$row[18]*100;
+            $conversion_rate = $row[21]/$row[19]*100;
+                
+            if($click_rate >  $click_through && $row[18] > $impression && $conversion_rate > $conversion){
+            
+                // Upload1::insert(['キャンペーン'=>$row[3], '広告グループ'=>$row[9], '入札額上限'=>$row[10], 'キーワードまたは商品ターゲティング'=>$row[11], 'マッチタイプ'=>'Phrase', 'ステータス'=>'一時停止']);
                 Upload1::insert(['キャンペーン'=>'E'.substr($row[3], 1), '広告グループ'=>$row[9], '入札額上限'=>($row[10]+$bid_add), 'キーワードまたは商品ターゲティング'=>$row[11], 'マッチタイプ'=>'Exact', 'ステータス'=>'有効']);
 
             }       

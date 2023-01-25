@@ -25,7 +25,7 @@
                         <tr>
                         <td>
                           <a> 新規広告作成用テンプレートは</a>
-                          <a style="color:blue" href="http://emarc-tool.com/static/0_%E6%96%B0%E8%A6%8F%E5%BA%83%E5%91%8A%E4%BD%9C%E6%88%90%E3%83%86%E3%83%B3%E3%83%95%E3%82%9A%E3%83%AC%E3%83%BC%E3%83%88.xlsx">  こちら</a>
+                          <a style="color:blue" href="{{ asset('qrcode/0_新規広告作成テンプレート.xlsx')}}">  こちら</a>
                         </td>
                       </table>
                     </td>
@@ -43,12 +43,14 @@
                         <table>
                               <td>
                               <label for="word_checkbox">
-                              <input type="checkbox" id='word_checkbox' name ='checkbox_target' checked  >
-                              <font size =5 color = "red "> 商品ターゲティング広告を利用する</font><br>
-                              <font size = 2.5 color = gray>
-                                商品ターゲティング広告を利用する場合はチェックを入れて下さい。
-                                </font>
-
+                                <input type="checkbox" id='word_checkbox' name ='A' checked>
+                                <font size =3 color = "red "> A_オートターゲティング</font><br>
+                                <input type="checkbox" id='word_checkbox' name ='P' checked>
+                                <font size =3 color = "red "> P_マニュアル (フレーズー致)</font><br>
+                                <input type="checkbox" id='word_checkbox' name ='E' checked>
+                                <font size =3 color = "red "> E_マニュアル (完全一致)</font><br>
+                                <input type="checkbox" id='word_checkbox' name ='G' checked>
+                                <font size =3 color = "red "> G_マニュアル (商品ターゲティング)</font><br>
                               </td>
                               <tr>
                               <tr>

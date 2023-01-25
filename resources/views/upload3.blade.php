@@ -26,8 +26,8 @@
                       </td>
                       <tr>
                       <td align="center">
-                        <a href="http://emarc-tool.com/static/3_%E5%85%A5%E6%9C%AD%E9%A1%8D%E8%AA%BF%E6%95%B4%E7%AF%84%E5%9B%B2.jpg" target="_blank">
-                          <img border="0" src="http://emarc-tool.com/static/3_%E5%85%A5%E6%9C%AD%E9%A1%8D%E8%AA%BF%E6%95%B4%E7%AF%84%E5%9B%B2.jpg" width="520">
+                        <a href="{{ asset('qrcode/3_入札額調整範囲.jpg')}}" target="_blank">
+                          <img border="0" src="{{ asset('qrcode/3_入札額調整範囲.jpg')}}" width="520">
                           <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp クリックすると拡大します。
                         </a>
                       </td>
